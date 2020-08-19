@@ -1,0 +1,9 @@
+.header-nav-button {
+  margin: 10px;
+  width: 60px;
+}
+
+.selected-nav-button {
+  background: black;
+  color: white;
+}
