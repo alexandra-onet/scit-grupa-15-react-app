@@ -3,7 +3,7 @@ import React from "react";
 import "./NavButton.css";
 
 export function NavButton(props) {
-  console.log(props);
+  // console.log(props);
   let cssClass = "header-nav-button";
 
   if (props.selected) {
