@@ -1,0 +1,18 @@
+.nr-of-meals {
+  margin: 20px;
+}
+
+.meal-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nr-of-meals-container {
+  display: flex;
+  justify-content: center;
+}
+
+.nr-of-meals {
+  width: 100%;
+  text-align: left;
+}

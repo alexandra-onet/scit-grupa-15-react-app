@@ -5,11 +5,11 @@ import { AppLogo } from "./AppLogo";
 import { Navigation } from "./Navigation/Navigation";
 import { SearchBar } from "./SearchBar";
 
-export function Header() {
+export function Header(props) {
   return (
     <div className="header">
       <AppLogo />
-      <Navigation />
+      <Navigation changePage={props.changePage} />
       <SearchBar />
     </div>
   );

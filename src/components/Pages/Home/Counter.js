@@ -2,8 +2,8 @@ import React from "react";
 
 export class Counter extends React.Component {
   state = {
-    numberOfClicks: 3,
-    initialNrOfClicks: 3,
+    numberOfClicks: 0,
+    initialNrOfClicks: 0,
   };
 
   incrementClicks = () => {

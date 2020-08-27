@@ -1,0 +1,9 @@
+.letter {
+  margin: 10px;
+  padding: 10px;
+}
+
+.letter-selected {
+  background: grey;
+  color: white;
+}
