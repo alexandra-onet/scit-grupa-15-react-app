@@ -1,4 +1,6 @@
 import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 import "./App.css";
 import { Header } from "./components/Header/Header";
 import { Home } from "./components/Pages/Home/Home";
@@ -16,12 +18,26 @@ export class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
-        <Header changePage={this.changePage} />
-        {this.state.currentPage === "Home" ? <Home /> : null}
-        {this.state.currentPage === "Meal" ? <Meal /> : null}
-        {this.state.currentPage === "Contact" ? <Contact /> : null}
-      </div>
+      <Router>
+        <div className="App">
+          <Header changePage={this.changePage} />
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/meal">
+              <Meal />
+            </Route>
+            <Route exact path="/contact">
+              <Contact />
+            </Route>
+
+            <Route path="/">
+              <p>Page not found</p>
+            </Route>
+          </Switch>
+        </div>
+      </Router>
     );
   }
 }
