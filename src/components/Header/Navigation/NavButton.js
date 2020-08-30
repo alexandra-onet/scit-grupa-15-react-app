@@ -5,7 +5,7 @@ import "./NavButton.css";
 export function NavButton(props) {
   // console.log(props);
   let cssClass = "header-nav-button";
-
+  
   if (props.selected) {
     cssClass = cssClass + "  selected-nav-button";
   }
