@@ -6,32 +6,12 @@ import "./Home.css";
 import { Loader } from "../../common/Loader/Loader";
 
 export class Home extends React.Component {
-  constructor() {
-    console.log("constructor");
-    super();
-    // this.render()
-  }
-
   state = {
     selectedLetter: null,
     loading: false,
     meals: [],
     errMsg: null,
   };
-
-  componentDidMount() {
-    console.log("mount");
-  }
-
-  componentWillUnmount() {
-    console.log("unmount");
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    console.log("component did update");
-    console.log("before update", prevState);
-    console.log("after update", this.state);
-  }
 
   changeLetter = (letter) => {
     this.setState({ selectedLetter: letter });

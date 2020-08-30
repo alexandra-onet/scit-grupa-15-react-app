@@ -9,7 +9,7 @@ export function Header(props) {
   return (
     <div className="header">
       <AppLogo />
-      <Navigation changePage={props.changePage} />
+      <Navigation />
       <SearchBar />
     </div>
   );

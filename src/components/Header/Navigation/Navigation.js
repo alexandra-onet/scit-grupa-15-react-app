@@ -8,15 +8,15 @@ export function Navigation(props) {
   return (
     <div className="header-navigation">
       <Link to="/">
-        <NavButton label="Home" selected={true} changePage={props.changePage} />
+        <NavButton label="Home" />
       </Link>
 
       <Link to="/meal">
-        <NavButton label="Meal" changePage={props.changePage} />
+        <NavButton label="Meal"  />
       </Link>
 
       <Link to="/contact">
-        <NavButton label="Contact" changePage={props.changePage} />
+        <NavButton label="Contact"  />
       </Link>
     </div>
   );

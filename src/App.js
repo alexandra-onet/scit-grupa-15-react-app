@@ -8,19 +8,11 @@ import { Contact } from "./components/Pages/Contact/Contact";
 import { Meal } from "./components/Pages/Meal/Meal";
 
 export class App extends React.Component {
-  state = {
-    currentPage: "Home",
-  };
-
-  changePage = (page) => {
-    this.setState({ currentPage: page });
-  };
-
   render() {
     return (
       <Router>
         <div className="App">
-          <Header changePage={this.changePage} />
+          <Header />
           <Switch>
             <Route exact path="/">
               <Home />
@@ -31,7 +23,6 @@ export class App extends React.Component {
             <Route exact path="/contact">
               <Contact />
             </Route>
-
             <Route path="/">
               <p>Page not found</p>
             </Route>
