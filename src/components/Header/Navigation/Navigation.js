@@ -4,20 +4,35 @@ import { NavButton } from "./NavButton";
 import "./Navigation.css";
 import { Link } from "react-router-dom";
 
-export function Navigation(props) {
-  return (
-    <div className="header-navigation">
-      <Link to="/">
-        <NavButton label="Home" />
-      </Link>
+export class Navigation extends React.Component {
+  state = {
+    currentSelectedButton: "Home",
+  };
 
-      <Link to="/meal">
-        <NavButton label="Meal"  />
-      </Link>
+  handleButtonClick = (event) => {
+    this.setState ({ currentSelectedButton: event.target.id })
+    console.log(event.target);
+  };
 
-      <Link to="/contact">
-        <NavButton label="Contact"  />
-      </Link>
-    </div>
-  );
+  render() {
+    return (
+      <div className="header-navigation">
+        <NavButton
+          label="Home"
+          selected={this.state.currentSelectedButton === "Home"}
+          onClick={this.handleButtonClick}
+        />
+        <NavButton
+          label="Meal"
+          selected={this.state.currentSelectedButton === "Meal"}
+          onClick={this.handleButtonClick}
+        />
+        <NavButton
+          label="Contact"
+          selected={this.state.currentSelectedButton === "Contact"}
+          onClick={this.handleButtonClick}
+        />
+      </div>
+    );
+  }
 }

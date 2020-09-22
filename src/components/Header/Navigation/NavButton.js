@@ -19,8 +19,7 @@ export const NavButton = withRouter(props => {
 
   return (
     <button
-      className={cssClass}
-    >
+    id={props.label} className={cssClass} onClick={props.onClick}>
       {props.label}
     </button>
   );
