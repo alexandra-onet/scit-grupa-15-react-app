@@ -10,7 +10,11 @@ export function NavButton(props) {
     cssClass = cssClass + "  selected-nav-button";
   }
 
-  return <button className={cssClass}>{props.label}</button>;
+  return <button 
+      className={cssClass}
+      id={props.label}
+      onClick={props.onClick}>
+  {props.label}</button>;
 }
 
 // function NavButton(props) {
